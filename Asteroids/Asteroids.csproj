@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{18192AB7-3DDD-4FA4-B564-AC042DCCCF98}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Asteroids</RootNamespace>
+    <AssemblyName>Asteroids</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EnemySpawner.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="GameObjects\Asteroid\Asteroid.cs" />
+    <Compile Include="GameObjects\Asteroid\AsteroidSize.cs" />
+    <Compile Include="GameObjects\Asteroid\IAsteroid.cs" />
+    <Compile Include="GameObjects\DirectionalGameObject.cs" />
+    <Compile Include="GameObjects\GameObject.cs" />
+    <Compile Include="GameObjects\IDirectionalGameObject.cs" />
+    <Compile Include="GameObjects\IGameObject.cs" />
+    <Compile Include="GameObjects\LaserEventArgs.cs" />
+    <Compile Include="GameObjects\Laser\ILaser.cs" />
+    <Compile Include="GameObjects\Laser\Laser.cs" />
+    <Compile Include="GameObjects\Missile\IMissile.cs" />
+    <Compile Include="GameObjects\Missile\Missile.cs" />
+    <Compile Include="GameObjects\Player\IPlayer.cs" />
+    <Compile Include="GameObjects\Player\Player.cs" />
+    <Compile Include="GameObjects\PositionEventArgs.cs" />
+    <Compile Include="GameObjects\RotationEventArgs.cs" />
+    <Compile Include="GameObjects\UFO\UFO.cs" />
+    <Compile Include="GameObjects\UFO\IUFO.cs" />
+    <Compile Include="IFactory.cs" />
+    <Compile Include="InputPublisher.cs" />
+    <Compile Include="IVisualizer.cs" />
+    <Compile Include="LinqExtension.cs" />
+    <Compile Include="ScoreEventArgs.cs" />
+    <Compile Include="Vector2.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Viewport.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
