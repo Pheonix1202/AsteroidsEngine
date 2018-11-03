@@ -6,5 +6,6 @@ namespace Asteroids
     {
         void OnDestroy(object sender, EventArgs e);
         void OnPositionChanged(object sender, PositionEventArgs e);
+        void OnRotationChanged(object sender, RotationEventArgs e);
     }
 }
